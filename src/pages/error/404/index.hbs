@@ -1,0 +1,25 @@
+---
+error_title: 404
+error_description: Не туда попали
+btn_text: Назад к чатам
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Чат Яндекс.Практикума</title>
+    <link rel="stylesheet" href="~src/main.sass">
+    <link rel="stylesheet" href="~src/pages/error/error.sass">
+</head>
+<body>
+<section class="error">
+    <div class="error__block">
+        <h1 class="error__title">{{error_title}}</h1>
+        <h2 class="error__desc">{{error_description}}</h2>
+        <a class="btn-white" href="/auth/login/">{{btn_text}}</a>
+    </div>
+</section>
+</body>
+</html>

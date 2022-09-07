@@ -1,0 +1,41 @@
+---
+auth_title: Вход
+login_placeholder: Логин
+password_placeholder: Пароль
+login_button: Авторизоваться
+register_button: Нет аккаунта?
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Чат Яндекс.Практикума</title>
+    <link rel="stylesheet" href="~src/main.sass">
+    <link rel="stylesheet" href="~src/pages/auth/auth.sass">
+</head>
+<body>
+<section class="auth">
+    <div class="auth__block">
+        <h1 class="auth__title">{{auth_title}}</h1>
+        <div class="auth__form-wrap">
+            <div class="auth__form-group">
+                <label class="auth__label" for="login">{{login_placeholder}}</label>
+                <input id="login" type="text" class="auth__input-login" name="login"
+                       placeholder="{{login_placeholder}}">
+            </div>
+            <div class="auth__form-group">
+                <label class="auth__label" for="password">{{password_placeholder}}</label>
+                <input id="password" type="password" class="auth__input-password" name="password"
+                       placeholder="{{password_placeholder}}">
+            </div>
+        </div>
+        <div class="auth__btn-holder">
+            <a href="/login/" class="auth__login-btn btn-blue">{{login_button}}</a>
+            <a href="/register/" class="auth__register-btn btn-white">{{register_button}}</a>
+        </div>
+    </div>
+</section>
+</body>
+</html>
