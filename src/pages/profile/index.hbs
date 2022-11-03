@@ -1,0 +1,93 @@
+---
+first_name: Иван
+second_name: Иванов
+display_name: Иван
+login: ivanivanov
+email: pochta@yandex.ru
+phone: +7 (909) 967 30 30
+avatar: /static/images/avatar.png
+oldPassword:
+newPassword:
+
+email_label: Почта
+login_label: Логин
+first_name_label: Имя
+second_name_label: Фамилия
+display_name_label: Имя в чате
+phone_label: Телефон
+
+change_button: Изменить данные
+change_avatar_button: Поменять аватар
+change_pwd_button: Изменить пароль
+exit_button: Выйти
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Чат Яндекс.Практикума</title>
+    <link rel="stylesheet" href="~src/main.sass">
+    <link rel="stylesheet" href="~src/pages/profile/profile.sass">
+    <script src="~src/pages/profile/profile.js"></script>
+</head>
+<body>
+<section class="profile">
+    <div class="profile__block">
+        <div class="profile__form-wrap">
+            <div class="profile__avatar-block">
+                <div class="profile__avatar-holder">
+                    <img class="profile__avatar" src="{{avatar}}"/>
+                    <a href="#" id="change_avatar" class="profile__avatar-upload-btn">{{change_avatar_button}}</a>
+{{!--                    <input id="avatar" class="file-upload" type="file" name="avatar" accept="image/*"/>--}}
+                </div>
+                <h1>{{display_name}}</h1>
+            </div>
+            <div class="profile__form-group">
+                <label class="profile__label" for="email">{{email_label}}</label>
+                <input id="email" type="text" class="profile__input-email" name="email"
+                       placeholder="{{email}}">
+            </div>
+            <div class="profile__form-group">
+                <label class="profile__label" for="login">{{login_label}}</label>
+                <input id="login" type="text" class="profile__input-login" name="login"
+                       placeholder="{{login}}">
+            </div>
+            <div class="profile__form-group">
+                <label class="profile__label" for="first_name">{{first_name_label}}</label>
+                <input id="first_name" type="text" class="profile__input-first_name" name="first_name"
+                       placeholder="{{first_name}}">
+            </div>
+            <div class="profile__form-group">
+                <label class="profile__label" for="second_name">{{second_name_label}}</label>
+                <input id="second_name" type="text" class="profile__input-second_name" name="second_name"
+                       placeholder="{{second_name}}">
+            </div>
+            <div class="profile__form-group">
+                <label class="profile__label" for="display_name">{{display_name_label}}</label>
+                <input id="display_name" type="text" class="profile__input-display_name" name="display_name"
+                       placeholder="{{display_name}}">
+            </div>
+            <div class="profile__form-group">
+                <label class="profile__label" for="phone">{{phone_label}}</label>
+                <input id="phone" type="text" class="profile__input-phone" name="phone"
+                       placeholder="{{phone}}">
+            </div>
+
+        </div>
+        <div class="profile__btn-holder">
+            <div class="profile__form-group">
+                <a href="#" class="profile__change-btn link-blue">{{change_button}}</a>
+            </div>
+            <div class="profile__form-group">
+                <a href="#" class="profile__change-btn link-blue">{{change_pwd_button}}</a>
+            </div>
+            <div class="profile__form-group">
+                <a href="#" class="profile__exit-btn link-red">{{exit_button}}</a>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,46 @@
+@import "../../main"
+
+.auth
+  height: 100%
+  padding: 0
+  margin: 0
+  display: flex
+  align-items: center
+  justify-content: center
+
+.auth__title
+  margin: 0 0 40px 0
+  text-align: center
+  font-style: normal
+  font-weight: 500
+  font-size: 20px
+  line-height: 20px
+
+.auth__block
+  min-height: 450px
+  max-height: 615px
+  min-width: 340px
+  height: 100%
+  padding: 50px 30px 30px 30px
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14)
+  @include border-radius(12px)
+  position: relative
+
+.auth__form-group
+  @include form-group
+
+.auth__form-group > input
+  @include inputText
+
+.auth__label
+  @include inputLabel
+
+.auth__btn-holder
+  padding: inherit
+  position: absolute
+  bottom: 0
+  right: 0
+  left: 0
+
+
+

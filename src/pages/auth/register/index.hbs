@@ -1,0 +1,65 @@
+---
+auth_title: Регистрация
+email_placeholder: Почта
+login_placeholder: Логин
+first_name_placeholder: Имя
+second_name_placeholder: Фамилия
+password_placeholder: Пароль
+password_confirm_placeholder: Пароль (ещё раз)
+login_button: Войти
+register_button: Зарегистрироваться
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Чат Яндекс.Практикума</title>
+    <link rel="stylesheet" href="~src/main.sass">
+    <link rel="stylesheet" href="~src/pages/auth/auth.sass">
+</head>
+<body>
+<section class="auth">
+    <div class="auth__block">
+        <h1 class="auth__title">{{auth_title}}</h1>
+        <div class="auth__form-wrap">
+            <div class="auth__form-group">
+                <label class="auth__label" for="email">{{email_placeholder}}</label>
+                <input id="email" type="text" class="auth__input-email" name="email"
+                       placeholder="{{email_placeholder}}">
+            </div>
+            <div class="auth__form-group">
+                <label class="auth__label" for="login">{{login_placeholder}}</label>
+                <input id="login" type="text" class="auth__input-login" name="login"
+                       placeholder="{{login_placeholder}}">
+            </div>
+            <div class="auth__form-group">
+                <label class="auth__label" for="first_name">{{first_name_placeholder}}</label>
+                <input id="first_name" type="text" class="auth__input-first_name" name="first_name"
+                       placeholder="{{first_name_placeholder}}">
+            </div>
+            <div class="auth__form-group">
+                <label class="auth__label" for="second_name">{{second_name_placeholder}}</label>
+                <input id="second_name" type="text" class="auth__input-second_name" name="second_name"
+                       placeholder="{{second_name_placeholder}}">
+            </div>
+            <div class="auth__form-group">
+                <label class="auth__label" for="password">{{password_placeholder}}</label>
+                <input id="password" type="password" class="auth__input-password" name="password"
+                       placeholder="{{password_placeholder}}">
+            </div>
+            <div class="auth__form-group">
+                <label class="auth__label" for="password_confirm">{{password_confirm_placeholder}}</label>
+                <input id="password_confirm" type="password" class="auth__input-password_confirm" name="password_confirm"
+                       placeholder="{{password_confirm_placeholder}}">
+            </div>
+        </div>
+        <div class="auth__btn-holder">
+            <a href="#" class="auth__login-btn btn-blue">{{register_button}}</a>
+            <a href="/login/" class="auth__register-btn btn-white">{{login_button}}</a>
+        </div>
+    </div>
+</section>
+</body>
+</html>

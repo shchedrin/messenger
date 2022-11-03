@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap')
+$font: 'Inter', sans-serif
+
+//Фон
+$bg-color: #FFFFFF
+$bg-panel: #FBFBFB
+
+//Акцентный синий
+$blue: #3369F3
+
+//Цвета бекграунда сообщений в чате
+$chat-bg-grey: #F8F8F8
+$chat-bg-blue: #E4EDFD
+
+//Тексты
+$med-grey: #EFEFEF
+$text-grey: #999999
+$black: #1E1E1E
+$red: #FF0000
+
+//Бордеры
+$border-grey: #EAEAEA
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false)
+  @if $inset
+    -webkit-box-shadow: inset $top $left $blur $color
+    -moz-box-shadow: inset $top $left $blur $color
+    box-shadow: inset $top $left $blur $color
+  @else
+    -webkit-box-shadow: $top $left $blur $color
+    -moz-box-shadow: $top $left $blur $color
+    box-shadow: $top $left $blur $color
+
+@mixin border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+
+*, *:before, *:after
+  box-sizing: inherit
+  font-family: $font
+
+html, body
+  height: 100%
+  box-sizing: border-box
+  background-color: $bg-color
+  font-family: $font
+
+body
+  margin: 0
+
+@mixin inputText
+  width: 100%
+  border: none
+  border-bottom: 1px solid $blue
+  color: $black
+  font-family: $font
+  font-size: 13px
+  font-weight: 500
+  padding: 6px 0 5px 0
+  &:focus-visible
+    outline: none
+
+@mixin inputLabel
+  font-size: 9px
+  line-height: 9px
+  font-weight: 500
+  color: $text-grey
+  display: block
+
+@mixin form-group
+  height: 68px
+  width: 100%
+
+@mixin form-group-inline
+  height: 34px
+  width: 100%
+
+@mixin btn
+  $height: 37px
+  width: 100%
+  height: $height
+  border: none
+  @include border-radius(8px)
+  text-align: center
+  display: block
+  text-decoration: none
+  font-weight: 500
+  font-size: 13px
+  line-height: $height
+
+.btn-blue
+  background: $blue
+  color: #FFFFFF
+  @include btn
+
+
+.btn-white
+  background: #FFFFFF
+  color: $blue
+  @include btn
+  font-size: 11px
+
+.link-blue
+  color: $blue
+  text-decoration: none
+
+.link-red
+  color: $red
+  text-decoration: none
